@@ -3,6 +3,7 @@
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +48,14 @@ Route::post('category/store', [categoryController::class, 'store'])->name('categ
 Route::get('category/delete/{id}', [categoryController::class, 'delete'])->name('category.delete');
 Route::get('category/edit/{id}', [categoryController::class, 'edit'])->name('category.edit');
 Route::post('category/update/{id}', [categoryController::class, 'update'])->name('category.update');
+
+// sales Route
+Route::get('sales', [SalesController::class, 'index'])->name('sales.list');
+Route::get('sales/create', [SalesController::class, 'create'])->name('sales.create');
+Route::post('sales/store', [SalesController::class, 'store'])->name('sales.store');
+Route::get('sales/delete/{$id}', [SalesController::class, 'delete'])->name('sales.delete');
+Route::get('sales/edit/{$id}', [SalesController::class, 'edit'])->name('sales.edit');
+Route::post('sales/update/{$id}', [SalesController::class, 'update'])->name('sales.update');
 
 
 require __DIR__.'/auth.php';
