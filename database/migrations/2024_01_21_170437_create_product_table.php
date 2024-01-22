@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('description');
             $table->tinyInteger('attribute_value_id')->nullable();
-            $table->tinyInteger('brand_id');
-            $table->tinyInteger('category_id');
-            $table->tinyInteger('store_id');
-            $table->tinyInteger('availability');
+            $table->tinyInteger('brand_id')->nullable();
+            $table->tinyInteger('category_id')->nullable();
+            $table->tinyInteger('store_id')->nullable();
+            $table->tinyInteger('availability')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

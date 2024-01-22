@@ -10,8 +10,8 @@
                     <ul>
                         <li><a href="{{route('product.list')}}">Product List</a></li>
                         <li><a href="{{route('product.create')}}">Add Product</a></li>
-                        <li><a href="/categoryList">Category List</a></li>
-                        <li><a href="addcategory.html">Add Category</a></li>
+                        <li><a href="{{route('category.list')}}">Category List</a></li>
+                        <li><a href="{{route('category.create')}}">Add Category</a></li>
 
                         <li><a href="brandlist.html">Brand List</a></li>
                         <li><a href="addbrand.html">Add Brand</a></li>
