@@ -164,7 +164,7 @@
                                                 <td>1</td>
                                                 <td class="productimgname">
                                                     <a href="productlist.html" class="product-img">
-                                                        <img src="backend/assets/img/product/product22.jpg" alt="product">
+                                                        <img src="{{asset('assets/img/product/product22.jpg')}}" alt="product">
                                                     </a>
                                                     <a href="productlist.html">Apple Earpods</a>
                                                 </td>
@@ -174,7 +174,7 @@
                                                 <td>2</td>
                                                 <td class="productimgname">
                                                     <a href="productlist.html" class="product-img">
-                                                        <img src="backend/assets/img/product/product23.jpg" alt="product">
+                                                        <img src="{{asset('assets/img/product/product23.jpg')}}" alt="product">
                                                     </a>
                                                     <a href="productlist.html">iPhone 11</a>
                                                 </td>
@@ -184,7 +184,7 @@
                                                 <td>3</td>
                                                 <td class="productimgname">
                                                     <a href="productlist.html" class="product-img">
-                                                        <img src="backend/assets/img/product/product24.jpg" alt="product">
+                                                        <img src="{{asset('assets/img/product/product24.jpg')}}" alt="product">
                                                     </a>
                                                     <a href="productlist.html">samsung</a>
                                                 </td>
@@ -194,7 +194,7 @@
                                                 <td>4</td>
                                                 <td class="productimgname">
                                                     <a href="productlist.html" class="product-img">
-                                                        <img src="backend/assets/img/product/product6.jpg" alt="product">
+                                                        <img src="{{asset('assets/img/product/product6.jpg')}}" alt="product">
                                                     </a>
                                                     <a href="productlist.html">Macbook Pro</a>
                                                 </td>
@@ -228,7 +228,7 @@
                                         <td><a href="javascript:void(0);">IT0001</a></td>
                                         <td class="productimgname">
                                             <a class="product-img" href="productlist.html">
-                                                <img src="backend/assets/img/product/product2.jpg" alt="product">
+                                                <img src="{{asset('assets/img/product/product2.jpg')}}" alt="product">
                                             </a>
                                             <a href="productlist.html">Orange</a>
                                         </td>
@@ -241,7 +241,7 @@
                                         <td><a href="javascript:void(0);">IT0002</a></td>
                                         <td class="productimgname">
                                             <a class="product-img" href="productlist.html">
-                                                <img src="backend/assets/img/product/product3.jpg" alt="product">
+                                                <img src="{{asset('assets/img/product/product3.jpg')}}" alt="product">
                                             </a>
                                             <a href="productlist.html">Pineapple</a>
                                         </td>
@@ -254,7 +254,7 @@
                                         <td><a href="javascript:void(0);">IT0003</a></td>
                                         <td class="productimgname">
                                             <a class="product-img" href="productlist.html">
-                                                <img src="backend/assets/img/product/product4.jpg" alt="product">
+                                                <img src="{{asset('assets/img/product/product4.jpg')}}" alt="product">
                                             </a>
                                             <a href="productlist.html">Stawberry</a>
                                         </td>
@@ -267,7 +267,7 @@
                                         <td><a href="javascript:void(0);">IT0004</a></td>
                                         <td class="productimgname">
                                             <a class="product-img" href="productlist.html">
-                                                <img src="backend/assets/img/product/product5.jpg" alt="product">
+                                                <img src="{{asset('assets/img/product/product5.jpg')}}" alt="product">
                                             </a>
                                             <a href="productlist.html">Avocat</a>
                                         </td>

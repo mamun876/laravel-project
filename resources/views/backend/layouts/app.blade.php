@@ -10,18 +10,18 @@
     <meta name="robots" content="noindex, nofollow">
     <title>@yield('title')</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="backend/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.png')}}">
 
-    <link rel="stylesheet" href="backend/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 
-    <link rel="stylesheet" href="backend/assets/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
 
-    <link rel="stylesheet" href="backend/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/dataTables.bootstrap4.min.css')}}">
 
-    <link rel="stylesheet" href="backend/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="backend/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
 
-    <link rel="stylesheet" href="backend/assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 
 <body>
@@ -35,21 +35,21 @@
     </div>
 
 
-    <script src="backend/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="{{asset('assets/js/jquery-3.6.0.min.js')}}"></script>
 
-    <script src="backend/assets/js/feather.min.js"></script>
+    <script src="{{asset('assets/js/feather.min.js')}}"></script>
 
-    <script src="backend/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="{{asset('assets/js/jquery.slimscroll.min.js')}}"></script>
 
-    <script src="backend/assets/js/jquery.dataTables.min.js"></script>
-    <script src="backend/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assets/js/dataTables.bootstrap4.min.js')}}"></script>
 
-    <script src="backend/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
-    <script src="backend/assets/plugins/apexchart/apexcharts.min.js"></script>
-    <script src="backend/assets/plugins/apexchart/chart-data.js"></script>
+    <script src="{{asset('assets/plugins/apexchart/apexcharts.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/apexchart/chart-data.js')}}"></script>
 
-    <script src="backend/assets/js/script.js"></script>
+    <script src="{{asset('assets/js/script.js')}}"></script>
 </body>
 
 </html>

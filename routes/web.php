@@ -1,14 +1,8 @@
 <?php
 
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\SalesController;
-use App\Models\User;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -22,19 +16,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('backend.dashboard');
-    
-    Route::get('/', function () {
-        return view('backend/dashboard');
-    })->middleware('userAuth');
+    return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('backend/login');
+Route::get('/dashboard', function () {
+    return view('/backend.dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::post('/login',[LoginController::class, 'authenticate'])->middleware('userAuth');
-Route::get('/delete{p_id}',[LoginController::class, 'delete'])->middleware('userAuth');
-Route::get('/logout',[LoginController::class, 'logout']);
-Route::get('/productList',[ProductController::class,'index']);
-Route::get('/backend/SalesList',[SalesController::class,'index']);
-Route::get('/backend/PurchaseList',[PurchaseController::class,'purchase']);
+
+Route::get('products', [ProductController::class, 'index'])->name('product.list');
+Route::get('products/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+Route::get('products/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('products/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('products/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+Route::post('products/update/{id}', [ProductController::class, 'update'])->name('product.update');
+
+require __DIR__.'/auth.php';
