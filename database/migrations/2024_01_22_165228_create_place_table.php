@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('place', function (Blueprint $table) {
             $table->id();
+            $table->string('country_name');
+            $table->string('region');
+            $table->string('status');
+            $table->string('action')->nullable();
             $table->timestamps();
         });
     }

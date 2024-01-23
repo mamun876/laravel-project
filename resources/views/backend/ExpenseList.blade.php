@@ -8,39 +8,32 @@
 <table class="table table-striped text-center my-4">
     <tr>
         <th>SL</th>
-        <th>SupplierName</th>
-        <th>Reference</th>
+        <th>CategoryName</th>
+        <th>Referance</th>
         <th>Date</th>
         <th>Status</th>
-        <th>GrandTotal</th>
-        <th>Paid</th>
-        <th>Due</th>
-        <th>PaymentStatus</th>
+        <th>Amount</th>
+        <th>Description</th>
         <th>Action</th>
     </tr>
     <!-- @php($i=1) -->
-    @foreach($purchase as $key=> $item)
+    @foreach($expense as $key=> $item)
 
     <tr>
         <td>{{++$key}}</td>
-        <td>{{$item->SupplierName}}</td>
-        <td>{{$item->Reference}}</td>
+        <td>{{$item->CategoryName}}</td>
+        <td>{{$item->Referance}}</td>
         <td>{{$item->Date}}</td>
         
         <td>
             <span class="badges bg-lightgreen">{{$item->Status}}</span>
           </td>
+      
         
-        <td>{{$item->GrandTotal}}</td>
+        <td>{{$item->Amount}}</td>
+      
        
-        <td>
-            <span class="badges bg-lightgreen">{{$item->Paid}}</span>
-          </td>
-        <td>
-            <span class="badges bg-lightred">{{$item->Due}}</span>
-          </td>
-       
-        <td>{{$item->PaymentStatus}}</td>
+        <td>{{$item->Description}}</td>
         <td><a class="btn btn-success" href="sales/edit/{{$item->id}}">Edit</a> | 
             <a class="btn btn-danger" href="{{route('sales.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
@@ -49,3 +42,7 @@
 </table>
 </div>
 @endsection
+
+
+
+       

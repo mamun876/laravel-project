@@ -9,7 +9,11 @@
     <tr>
 
         <th>SL</th>
-        <th>Name</th>
+        <th>category_name</th>
+        <th>category_code</th>
+        <th>description</th>
+        <th>created_by</th>
+
         <th>Action</th>
     </tr>
     <!-- @php($i=1) -->
@@ -17,8 +21,10 @@
 
     <tr>
         <td>{{$key+1}}</td>
-        <td>{{$item->name}}</td>
-        <td>{{$item->active}}</td>
+        <td>{{$item->category_name}}</td>
+        <td>{{$item->category_code}}</td>
+        <td>{{$item->description}}</td>
+        <td>{{$item->created_by}}</td>
        
         <td><a class="btn btn-success" href="{{route('category.edit', $item->id)}}">Edit</a> | <a class="btn btn-danger" href="{{route('category.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a></td>
     </tr>

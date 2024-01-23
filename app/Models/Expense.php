@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Expense extends Model
 {
+    protected $table = 'expense';
+    protected $fillable=[
+        'CategoryName', 'Reference','Date', 'Status', 'Amount', 'Description',
+    ];
+
     use HasFactory;
 }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('quotation', function (Blueprint $table) {
             $table->id();
+            $table->string('product_name');
+            $table->string('reference');
+            $table->string('customer_name'); // If 'customer_name' is numeric, consider using a numeric type
+            $table->string('status');
+            $table->string('grand_total')->nullable();
+            $table->string('action')->nullable();
             $table->timestamps();
         });
     }

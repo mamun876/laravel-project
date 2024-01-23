@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ReturnModel extends Model
 {
+    protected $table='return';
+    protected $fillable=[
+        'product_name', 'date', 'customer', 'status', 'grand_total', 'paid', 'due', 'payment_status', 'action'
+    ];
     use HasFactory;
 }

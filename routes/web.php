@@ -1,9 +1,18 @@
 <?php
 
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\PlaceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\QuotationController;
+use App\Http\Controllers\ReturnController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\SalesReturnControler;
+use App\Http\Controllers\TransferController;
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,5 +66,24 @@ Route::get('sales/delete/{$id}', [SalesController::class, 'delete'])->name('sale
 Route::get('sales/edit/{$id}', [SalesController::class, 'edit'])->name('sales.edit');
 Route::post('sales/update/{$id}', [SalesController::class, 'update'])->name('sales.update');
 
+// purchase Route
+Route::get('purchase', [PurchaseController::class, 'index'])->name('purchase.list');
 
+// Expenses Route
+Route::get('expense',[ExpenseController::class, 'index'])->name('expense.list');
+
+// quototation Route
+Route::get('quotation',[QuotationController::class, 'index'])->name('quotation.list');
+
+// Transfer Route
+Route::get('transfer',[TransferController::class, 'index'])->name('transfer.list');
+
+// Return Route
+Route::get('return', [SalesReturnControler::class, 'index'])->name('return.list');
+
+// People Route
+Route::get('people', [PeopleController::class, 'index'])->name('people.list');
+
+// place Route
+Route::get('place', [PlaceController::class, 'index'])->name('place.list');
 require __DIR__.'/auth.php';

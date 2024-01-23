@@ -30,7 +30,7 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/purchase1.svg')}}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="/backend/PurchaseList">Purchase List</a></li>
+                        <li><a href="{{route('purchase.list')}}">Purchase List</a></li>
                         <li><a href="addpurchase.html">Add Purchase</a></li>
                         <li><a href="importpurchase.html">Import Purchase</a></li>
                     </ul>
@@ -38,7 +38,7 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/expense1.svg')}}" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="expenselist.html">Expense List</a></li>
+                        <li><a href="{{route('expense.list')}}">Expense List</a></li>
                         <li><a href="createexpense.html">Add Expense</a></li>
                         <li><a href="expensecategory.html">Expense Category</a></li>
                     </ul>
@@ -46,14 +46,14 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/quotation1.svg')}}" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="quotationList.html">Quotation List</a></li>
+                        <li><a href="{{route('quotation.list')}}">Quotation List</a></li>
                         <li><a href="addquotation.html">Add Quotation</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/transfer1.svg')}}" alt="img"><span> Transfer</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="transferlist.html">Transfer List</a></li>
+                        <li><a href="{{route('transfer.list')}}">Transfer List</a></li>
                         <li><a href="addtransfer.html">Add Transfer </a></li>
                         <li><a href="importtransfer.html">Import Transfer </a></li>
                     </ul>
@@ -61,7 +61,7 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/return1.svg')}}" alt="img"><span> Return</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="salesreturnlist.html">Sales Return List</a></li>
+                        <li><a href="{{route('return.list')}}">Sales Return List</a></li>
                         <li><a href="createsalesreturn.html">Add Sales Return </a></li>
                         <li><a href="purchasereturnlist.html">Purchase Return List</a></li>
                         <li><a href="createpurchasereturn.html">Add Purchase Return </a></li>
@@ -70,7 +70,7 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/users1.svg')}}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="customerlist.html">Customer List</a></li>
+                        <li><a href="{{route('people.list')}}">Customer List</a></li>
                         <li><a href="addcustomer.html">Add Customer </a></li>
                         <li><a href="supplierlist.html">Supplier List</a></li>
                         <li><a href="addsupplier.html">Add Supplier </a></li>
@@ -83,7 +83,7 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/places.svg')}}" alt="img"><span> Places</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="newcountry.html">New Country</a></li>
+                        <li><a href="{{route('place.list')}}">New Country</a></li>
                         <li><a href="countrieslist.html">Countries list</a></li>
                         <li><a href="newstate.html">New State </a></li>
                         <li><a href="statelist.html">State list</a></li>

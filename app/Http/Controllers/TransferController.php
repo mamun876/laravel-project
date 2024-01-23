@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Place;
+use App\Models\Transfer;
 use Illuminate\Http\Request;
 
-class PlaceController extends Controller
+class TransferController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data['place']=Place::all();
-        return view('backend/PlaceList', $data);
+        $data['transfer']=Transfer::all();
+        return view('backend/TransferList', $data);
     }
 
     /**

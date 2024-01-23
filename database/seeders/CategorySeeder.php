@@ -16,32 +16,12 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         DB::table('category')->insert([
-            'name' =>"Electronics",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Office Supplements",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Headers",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Phone",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Computer",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Clothing",
-            'active'=>"1"
-        ]);
-        DB::table('category')->insert([
-            'name' =>"Others",
-            'active'=>"1"
+            'category_name' => 'Some Category',
+            'category_code' => 123,
+            'description' => 'Category Description',
+            'created_by' => 1, // Replace with the actual user ID or creator identifier
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
