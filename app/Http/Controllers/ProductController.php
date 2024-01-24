@@ -30,9 +30,9 @@ class ProductController extends Controller
 
         // Assuming you have a Product model
         $validate = $request->validate([
-            'name' => 'required|min:2',
+            'product_name' => 'required|min:2',
             'sku' => 'required',
-            'description' => 'required',
+            'category' => 'required',
             'price' => 'required|numeric',
         ]);
     
@@ -61,7 +61,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $validate = $request->validate([
-            'name' => 'required|min:2',
+            'product_name' => 'required|min:2',
             'sku' => 'required',
             'description' => 'required',
             'price' => 'required|numeric',
@@ -70,10 +70,14 @@ class ProductController extends Controller
         // If validation passes, proceed to store data
         if ($validate) {
             $data = [
-                'name' => $request->name,
+                'product_name' => $request->product_name,
                 'sku' => $request->sku,
-                'description' => $request->description,
+                'category' => $request->category,
+                'brand' => $request->brand,
                 'price' => $request->price,
+                'unit' => $request->unit,
+                'qty' => $request->qty,
+                'created_by' => $request->created_by,
             ];
         $product->update($data);
 

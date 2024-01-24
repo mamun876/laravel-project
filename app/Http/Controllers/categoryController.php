@@ -63,11 +63,14 @@ class categoryController extends Controller
     {
         $category= Category::find($id);
         $validate = $request->validate([
-            'name' => 'required',
+            'category_name' => 'required',
         ]);
         if ($validate) {
             $data=[
-                'name' => $request->name,
+                'category_name' => $request->category_name,
+                'category_code' => $request->category_code,
+                'description' => $request->description,
+                'created_by' => $request->created_by,
             ];
             $category->update($data);
             return redirect()->route('category.list')->with('msg', 'Updated Successfully');

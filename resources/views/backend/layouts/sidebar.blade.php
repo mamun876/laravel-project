@@ -13,7 +13,7 @@
                         <li><a href="{{route('category.list')}}">Category List</a></li>
                         <li><a href="{{route('category.create')}}">Add Category</a></li>
 
-                        <li><a href="brandlist.html">Brand List</a></li>
+                        <li><a href="{{route('brand.list')}}">Brand List</a></li>
                         <li><a href="addbrand.html">Add Brand</a></li>
                     </ul>
                 </li>

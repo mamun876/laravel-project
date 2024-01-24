@@ -17,33 +17,33 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         DB::table('product')->insert([
-            'name' =>"sadid",
-            'sku' => 'P132',
-            'price' => '500',
-            'qty' => '5',
-            'image' => 'sadid.jpeg',
-            'description' => 'this is awesome product',
-            'attribute_value_id' => '1',
-            'brand_id' => '1',
-            'category_id' => '1',
-            'store_id' => '1',
-            'availability' => '1',
+            'product_name' => 'Monitor',
+            'sku' => 'SKU123',
+            'category' => 'Electronics',
+            'brand' => 'Sony',
+            'price' => 19.99,
+            'unit' => 5.0,
+            'qty' => '10',
+            'created_by' => 'Admin',
+            'created_at' => now(),
+            'updated_at' => now(),
             
+           
         ]);
+      
         DB::table('product')->insert([
-            'name' =>"Shirt",
-            'sku' => 'S132',
-            'price' => '500',
+            'product_name' => 'Couch',
+            'sku' => 'SKU789',
+            'category' => 'Home',
+            'brand' => 'IKEA',
+            'price' => 499.99,
+            'unit' => 1.0,
             'qty' => '5',
-            'image' => 'sadid.jpeg',
-            'description' => 'this is awesome product',
-            'attribute_value_id' => '2',
-            'brand_id' => '2',
-            'category_id' => '2',
-            'store_id' => '2',
-            'availability' => '2',
-            
+            'created_by' => 'Admin',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
+       
         // Product::factory(10)->create();
     }
 }

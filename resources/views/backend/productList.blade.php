@@ -8,10 +8,14 @@
 <table class="table table-striped text-center my-4">
     <tr>
         <th>SL</th>
-        <th>Name</th>
+        <th>Product Name</th>
         <th>SKU</th>
-        <th>Description</th>
+        <th>Category</th>
+        <th>Brand</th>
         <th>Price</th>
+        <th>Unit</th>
+        <th>Qty</th>
+        <th>Created By</th>
         <th>Action</th>
     </tr>
     <!-- @php($i=1) -->
@@ -19,10 +23,14 @@
 
     <tr>
         <td>{{$key+1}}</td>
-        <td>{{$item->name}}</td>
+        <td>{{$item->product_name}}</td>
         <td>{{$item->sku}}</td>
-        <td>{{$item->description}}</td>
+        <td>{{$item->category}}</td>
+        <td>{{$item->brand}}</td>
         <td>{{$item->price}}</td>
+        <td>{{$item->unit}}</td>
+        <td>{{$item->qty}}</td>
+        <td>{{$item->created_by}}</td>
         <td><a class="btn btn-success" href="{{route('product.edit', $item->id)}}">Edit</a> | 
             <a class="btn btn-danger" href="{{route('product.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
