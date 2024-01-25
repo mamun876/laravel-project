@@ -21,15 +21,20 @@ class BrandController extends Controller
      */
     public function create()
     {
-        //
+       return view('backend/brandcreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Brand $brand)
     {
-        //
+        $validate = $request->validate([
+            'brand_name' => 'required | min:4'
+        ]);
+        if($validate){
+            $brand->create($request->all());
+        }
     }
 
     /**

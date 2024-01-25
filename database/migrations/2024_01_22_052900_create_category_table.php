@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('category', function (Blueprint $table) {
             $table->id();
             $table->string('category_name');
-            $table->tinyInteger('category_code')->nullable();
+            $table->string('category_code')->nullable();
             $table->text('description'); // Assuming description is a text field
             $table->string('created_by');
             $table->timestamp('created_at')->useCurrent();

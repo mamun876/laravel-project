@@ -63,7 +63,6 @@ class ProductController extends Controller
         $validate = $request->validate([
             'product_name' => 'required|min:2',
             'sku' => 'required',
-            'description' => 'required',
             'price' => 'required|numeric',
         ]);
     

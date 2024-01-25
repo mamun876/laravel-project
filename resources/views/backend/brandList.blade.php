@@ -12,7 +12,6 @@
         <th>Image</th>
         <th>Brand Name</th>
         <th>Brand Description</th>
-        <th>created_by</th>
         <th>Action</th>
     </tr>
     <!-- @php($i=1) -->
