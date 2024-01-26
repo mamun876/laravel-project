@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\PeopleController;
@@ -58,6 +59,10 @@ Route::get('category/delete/{id}', [categoryController::class, 'delete'])->name(
 Route::get('category/edit/{id}', [categoryController::class, 'edit'])->name('category.edit');
 Route::post('category/update/{id}', [categoryController::class, 'update'])->name('category.update');
 
+// brand ROute
+Route::get('brand', [BrandController::class, 'index'])->name('brand.list');
+Route::get('brand/edit{id}', [BrandController::class, 'edit'])->name('brand.edit');
+Route::get('brand/delete{id}', [BrandController::class, 'delete'])->name('brand.delete');
 // sales Route
 Route::get('sales', [SalesController::class, 'index'])->name('sales.list');
 Route::get('sales/create', [SalesController::class, 'create'])->name('sales.create');

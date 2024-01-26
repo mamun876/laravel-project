@@ -11,17 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('brand', function (Blueprint $table) {
             $table->id();
-            $table->string('product_name');
-            $table->string('sku');
-            $table->string('category')->nullable();
-            $table->string('brand');
-            $table->double('price');
-            $table->double('unit');
-            $table->string('qty');
-            $table->string('created_by');
-            $table->string('action')->nullable();
+            $table->string('image');
+            $table->string('brand_name');
+            $table->text('brand_description');
+            $table->string('action');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('brand');
     }
 };

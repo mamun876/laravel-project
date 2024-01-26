@@ -30,7 +30,7 @@ class categoryController extends Controller
     public function store(Request $request, Category $category)
     {
         $validate = $request->validate([
-            'name' => 'required|min:2',
+            'category_name' => 'required|min:2',
            
         ]);
         if ($validate) {
@@ -61,13 +61,16 @@ class categoryController extends Controller
      */
     public function update(Request $request, string  $id) 
     {
-        $category= Category::find($id);
+        $category= Category::find($id); 
         $validate = $request->validate([
-            'name' => 'required',
+            'category_name' => 'required',
         ]);
         if ($validate) {
             $data=[
-                'name' => $request->name,
+                'category_name' => $request->category_name,
+                'category_code' => $request->category_code,
+                'description' => $request->description,
+                'created_by' => $request->created_by,
             ];
             $category->update($data);
             return redirect()->route('category.list')->with('msg', 'Updated Successfully');
