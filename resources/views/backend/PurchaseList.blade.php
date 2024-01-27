@@ -41,8 +41,8 @@
           </td>
        
         <td>{{$item->PaymentStatus}}</td>
-        <td><a class="btn btn-success" href="sales/edit/{{$item->id}}">Edit</a> | 
-            <a class="btn btn-danger" href="{{route('sales.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
+        <td><a class="btn btn-success" href="{{route('purchase.edit', $item->id)}}">Edit</a> | 
+            <a class="btn btn-danger" href="{{route('purchase.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>
     @endforeach

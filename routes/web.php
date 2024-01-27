@@ -61,7 +61,10 @@ Route::post('category/update/{id}', [categoryController::class, 'update'])->name
 
 // brand ROute
 Route::get('brand', [BrandController::class, 'index'])->name('brand.list');
+Route::get('brand/create', [BrandController::class, 'create'])->name('brand.create');
+Route::post('brand/store', [BrandController::class, 'store'])->name('brand.store');
 Route::get('brand/edit{id}', [BrandController::class, 'edit'])->name('brand.edit');
+Route::post('brand/update{id}', [BrandController::class, 'update'])->name('brand.update');
 Route::get('brand/delete{id}', [BrandController::class, 'delete'])->name('brand.delete');
 // sales Route
 Route::get('sales', [SalesController::class, 'index'])->name('sales.list');
@@ -73,6 +76,11 @@ Route::post('sales/update/{$id}', [SalesController::class, 'update'])->name('sal
 
 // purchase Route
 Route::get('purchase', [PurchaseController::class, 'index'])->name('purchase.list');
+Route::get('purchase/create', [PurchaseController::class, 'create'])->name('purchase.create');
+Route::post('purchase/store', [PurchaseController::class, 'store'])->name('purchase.store');
+Route::get('purchase/edit/{$id}', [PurchaseController::class, 'edit'])->name('purchase.edit');
+Route::post('purchase/update/{$id}', [PurchaseController::class, 'update'])->name('purchase.update');
+Route::get('purchase/delete/{$id}', [PurchaseController::class, 'delete'])->name('purchase.delete');
 
 // Expenses Route
 Route::get('expense',[ExpenseController::class, 'index'])->name('expense.list');

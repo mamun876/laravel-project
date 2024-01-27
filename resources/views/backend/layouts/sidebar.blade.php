@@ -14,7 +14,7 @@
                         <li><a href="{{route('category.create')}}">Add Category</a></li>
 
                         <li><a href="{{route('brand.list')}}">Brand List</a></li>
-                        <li><a href="addbrand.html">Add Brand</a></li>
+                        <li><a href="{{route('brand.create')}}">Add Brand</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -31,7 +31,7 @@
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/purchase1.svg')}}" alt="img"><span> Purchase</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('purchase.list')}}">Purchase List</a></li>
-                        <li><a href="addpurchase.html">Add Purchase</a></li>
+                        <li><a href="{{route('purchase.create')}}">Add Purchase</a></li>
                         <li><a href="importpurchase.html">Import Purchase</a></li>
                     </ul>
                 </li>

@@ -26,7 +26,7 @@
         <td>{{++$key}}</td>
         <td>{{$item->Date}}</td>
         <td>{{$item->CustomerName}}</td>
-        <td>{{$item->Referance}}</td>
+        <td>{{$item->Reference}}</td>
         
         <td>
             <span class="badges bg-lightgreen">{{$item->Status}}</span>
@@ -42,7 +42,7 @@
           </td>
        
         <td>{{$item->Biller}}</td>
-        <td><a class="btn btn-success" href="sales/edit/{{$item->id}}">Edit</a> | 
+        <td><a class="btn btn-success" href="{{route('sales.edit', $item->id)}}">Edit</a> | 
             <a class="btn btn-danger" href="{{route('sales.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>

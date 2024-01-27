@@ -21,15 +21,22 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/PurchaseCreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Purchase $purchase)
     {
-        //
+        $purchase = Purchase::all();
+        $validate = $request->validate([
+            'SupplierName'=> 'required | min:2'
+        ]);
+        if($validate){
+            $purchase->create($request->all());
+            return redirect()->route('purchase.list')->with('msg', 'inserted successfully');
+        }
     }
 
     /**
@@ -45,7 +52,8 @@ class PurchaseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data['purchase']=Purchase::find($id);
+        return view('backedn.purchaseedit',$data );
     }
 
     /**
@@ -53,14 +61,25 @@ class PurchaseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $purchase = Purchase::all();
+        $validate = $request->validate([
+            'SupplierName'=> 'required | min:2'
+        ]);
+        if($validate){
+            $purchase->update($request->all());
+            return redirect()->route('purchase.list')->with('msg', 'update successfully');
+        }
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+       $purchase=Purchase::find($id);
+       $purchase->delete();
+       return redirect()->back()->with('msg', 'successfully deleted');
+
     }
 }

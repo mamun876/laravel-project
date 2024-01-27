@@ -11,6 +11,6 @@ class Sales extends Model
 
     protected $table ='sales';
     protected $fillable=[
-        'Date', 'CustomerName', 'Referance', 'Status', 'Payment', 'Total', 'Paid', 'Due', 'Biller', 'Action'
+        'Date', 'CustomerName', 'Reference', 'Status', 'Payment', 'Total', 'Paid', 'Due', 'Biller', 'Action'
     ];
 }

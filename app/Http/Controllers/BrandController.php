@@ -34,6 +34,7 @@ class BrandController extends Controller
         ]);
         if($validate){
             $brand->create($request->all());
+            return redirect()->route('brand.list')->with('msg', "inserted successfully");
         }
     }
 
@@ -50,7 +51,8 @@ class BrandController extends Controller
      */
     public function edit(string $id)
     {
-        //
+      $data['brands']=Brand::find($id);
+      return view('backend.brandList', $data);
     }
 
     /**
@@ -58,14 +60,29 @@ class BrandController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $brands= Brand::find($id);
+        $validate = $request->validate([
+            'brand_name' => 'required | min:4'
+        ]);
+        if($validate){
+            $data=[
+                'image'=>$request->image,
+                'brand_name'=>$request->band_name,
+                'brand_description'=>$request->brand_description,
+            ];
+            $brands->update($data);
+            return redirect()->route('brand.list')->with('msg', 'updated successfully');
+        }
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+        $brand = Brand::find($id);
+        $brand->delete();
+        return redirect()->back()->with('msg', "deleted successfully");
     }
 }
