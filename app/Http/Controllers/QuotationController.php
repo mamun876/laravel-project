@@ -21,15 +21,21 @@ class QuotationController extends Controller
      */
     public function create()
     {
-        //
+        return view ('backend/QuotationCreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Quotation $quotation)
     {
-        //
+        $validate= $request->validate([
+            'product_name' =>'required'
+        ]);
+        if($validate){
+            $quotation->create($request->all());
+            return redirect()->route('quotation.list')->with('msg', 'Inserted Successfully');
+        }
     }
 
     /**
@@ -45,7 +51,8 @@ class QuotationController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $quotation= Quotation::find($id);
+        return view('backend/QuotationEdit', compact('quotation'));
     }
 
     /**
@@ -53,14 +60,18 @@ class QuotationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $quotation = Quotation::find($id);
+        $quotation->update($request->all());
+        return redirect()->route('quotation.list')->with('msg', "updated successfully");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+        $quotation=Quotation::find($id);
+        $quotation->delete();
+        return redirect()->back()->with('msg', "deleted successfully");
     }
 }

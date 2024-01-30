@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ReturnModel extends Model
+class SalesReturnModel extends Model
 {
     protected $table='return';
     protected $fillable=[

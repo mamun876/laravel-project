@@ -13,8 +13,8 @@ class SalesController extends Controller
      */
     public function index()
     {
-        $data=Sales::all();
-        return view('backend.SalesList', compact('data'));
+        $data['data']=Sales::all();
+        return view('backend.SalesList',$data);
     }
 
     /**
@@ -38,7 +38,7 @@ class SalesController extends Controller
         ]);
         if($validate){
             $sales->create($request->all());
-            return redirect()->route('sales.list')->with('msg', 'Successfuly inserted');
+            return redirect()->route('sales.list')->with('msg', 'Successfully inserted');
         }
     }
 

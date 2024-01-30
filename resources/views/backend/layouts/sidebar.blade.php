@@ -39,7 +39,7 @@
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/expense1.svg')}}" alt="img"><span> Expense</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('expense.list')}}">Expense List</a></li>
-                        <li><a href="createexpense.html">Add Expense</a></li>
+                        <li><a href="{{route('expense.create')}}">Add Expense</a></li>
                         <li><a href="expensecategory.html">Expense Category</a></li>
                     </ul>
                 </li>
@@ -47,24 +47,24 @@
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/quotation1.svg')}}" alt="img"><span> Quotation</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('quotation.list')}}">Quotation List</a></li>
-                        <li><a href="addquotation.html">Add Quotation</a></li>
+                        <li><a href="{{route('quotation.create')}}">Add Quotation</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/transfer1.svg')}}" alt="img"><span> Transfer</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('transfer.list')}}">Transfer List</a></li>
-                        <li><a href="addtransfer.html">Add Transfer </a></li>
+                        <li><a href="{{route('transfer.create')}}">Add Transfer </a></li>
                         <li><a href="importtransfer.html">Import Transfer </a></li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/return1.svg')}}" alt="img"><span> Return</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="{{route('return.list')}}">Sales Return List</a></li>
-                        <li><a href="createsalesreturn.html">Add Sales Return </a></li>
-                        <li><a href="purchasereturnlist.html">Purchase Return List</a></li>
-                        <li><a href="createpurchasereturn.html">Add Purchase Return </a></li>
+                        <li><a href="{{route('sales_return.list')}}">Sales Return List</a></li>
+                        <li><a href="{{route('sales.create')}}">Add Sales Return </a></li>
+                        <li><a href="{{route('purchase_return.list')}}">Purchase Return List</a></li>
+                        <li><a href="{{route('purchase_return.create')}}">Add Purchase Return </a></li>
                     </ul>
                 </li>
                 <li class="submenu">

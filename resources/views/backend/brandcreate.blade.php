@@ -6,6 +6,7 @@
     <input type="file" name="image" value="{{old('image')}}" class="form-control">
     <input type="text" name="brand_name" placeholder="brand_name" class="form-control" value="{{ old('brand_name') }}">
     <input type="text" name="brand_description" placeholder="brand_description" class="form-control" value="{{ old('brand_description') }}">
+    <input type="text" name="action" placeholder="action" class="form-control" value="{{ old('action') }}">
     <input type="submit" value="Submit" class="btn btn-success">
 </form>
 

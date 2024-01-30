@@ -62,13 +62,14 @@ class BrandController extends Controller
     {
         $brands= Brand::find($id);
         $validate = $request->validate([
-            'brand_name' => 'required | min:4'
+            'brand_name' => 'required'
         ]);
         if($validate){
             $data=[
                 'image'=>$request->image,
                 'brand_name'=>$request->band_name,
                 'brand_description'=>$request->brand_description,
+                'action'=>$request->action,
             ];
             $brands->update($data);
             return redirect()->route('brand.list')->with('msg', 'updated successfully');

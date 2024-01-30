@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ReturnModel;
 use Illuminate\Http\Request;
 
-class SalesReturnControler extends Controller
+class PurchaseReturnController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data['returns']=ReturnModel::all();
-       return view ('backend/ReturnList', $data);
+        //
     }
 
     /**

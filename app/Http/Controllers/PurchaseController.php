@@ -29,9 +29,8 @@ class PurchaseController extends Controller
      */
     public function store(Request $request, Purchase $purchase)
     {
-        $purchase = Purchase::all();
         $validate = $request->validate([
-            'SupplierName'=> 'required | min:2'
+            'SupplierName'=> 'required'
         ]);
         if($validate){
             $purchase->create($request->all());
@@ -53,22 +52,29 @@ class PurchaseController extends Controller
     public function edit(string $id)
     {
         $data['purchase']=Purchase::find($id);
-        return view('backedn.purchaseedit',$data );
+        return view('backend.PurchaseEdit',$data );
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        $purchase = Purchase::all();
-        $validate = $request->validate([
-            'SupplierName'=> 'required | min:2'
-        ]);
-        if($validate){
+        $purchase = Purchase::find($id);
+        // $validate = $request->validate([
+        //     'SupplierName'=> 'required',
+        // ]);
+        // if($validate){
+        //     $data=[
+        //         'SupplierName'=>$request->SupplierName,
+        //         'Reference'=>$request->Reference,
+
+        //     ];
+        // dd($request->all());
             $purchase->update($request->all());
+
             return redirect()->route('purchase.list')->with('msg', 'update successfully');
-        }
+        // }
 
     }
 

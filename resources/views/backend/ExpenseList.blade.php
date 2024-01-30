@@ -9,7 +9,7 @@
     <tr>
         <th>SL</th>
         <th>CategoryName</th>
-        <th>Referance</th>
+        <th>Reference</th>
         <th>Date</th>
         <th>Status</th>
         <th>Amount</th>
@@ -22,7 +22,7 @@
     <tr>
         <td>{{++$key}}</td>
         <td>{{$item->CategoryName}}</td>
-        <td>{{$item->Referance}}</td>
+        <td>{{$item->Reference}}</td>
         <td>{{$item->Date}}</td>
         
         <td>
@@ -34,8 +34,8 @@
       
        
         <td>{{$item->Description}}</td>
-        <td><a class="btn btn-success" href="sales/edit/{{$item->id}}">Edit</a> | 
-            <a class="btn btn-danger" href="{{route('sales.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
+        <td><a class="btn btn-success" href="expense/edit/{{$item->id}}">Edit</a> | 
+            <a class="btn btn-danger" href="{{route('expense.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>
     @endforeach

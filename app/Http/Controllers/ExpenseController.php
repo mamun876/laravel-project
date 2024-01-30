@@ -21,15 +21,21 @@ class ExpenseController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/PurchaseCreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Expense $expense)
     {
-        //
+       $validate = $request->validate([
+        'CategoryName' =>'required',
+       ]);
+       if($validate){
+        $expense->create($request->all());
+        return redirect()->route('expense.list')->with('msg', "inserted successfully");
+       }
     }
 
     /**
@@ -45,22 +51,27 @@ class ExpenseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $expense = Expense::find($id);
+        return view('backend/ExpenseEdit', compact('expense'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+       $expense = Expense::find($id);
+       $expense->update($request->all());
+       return redirect()->route('expense.list')->with('msg', 'Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+        $expense=Expense::find($id);
+        $expense->delete();
+        return redirect()->back()->with('msg', "Deleted Successfully");
     }
 }
