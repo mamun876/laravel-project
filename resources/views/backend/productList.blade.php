@@ -25,8 +25,8 @@
         <td>{{$key+1}}</td>
         <td>{{$item->product_name}}</td>
         <td>{{$item->sku}}</td>
-        <td>{{$item->category}}</td>
-        <td>{{$item->brand}}</td>
+        <td>{{$item->category->category_name}}</td>
+        <td>{{$item->brand->brand_name}}</td>
         <td>{{$item->price}}</td>
         <td>{{$item->unit}}</td>
         <td>{{$item->qty}}</td>

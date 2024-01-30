@@ -30,7 +30,7 @@ class BrandController extends Controller
     public function store(Request $request, Brand $brand)
     {
         $validate = $request->validate([
-            'brand_name' => 'required | min:4'
+            'brand_name' => 'required'
         ]);
         if($validate){
             $brand->create($request->all());
@@ -84,6 +84,6 @@ class BrandController extends Controller
     {
         $brand = Brand::find($id);
         $brand->delete();
-        return redirect()->back()->with('msg', "deleted successfully");
+        return redirect()->back()->with('msg', 'Deleted Successfully!');
     }
 }

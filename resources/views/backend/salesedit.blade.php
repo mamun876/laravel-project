@@ -7,10 +7,17 @@
     <input type="text" name="Date" placeholder="Date" class="form-control" value="{{ old('Date', $data->Date) }}">
 
     <label for="customerName">Customer Name:</label>
+<<<<<<< HEAD
     <input type="text" name="CustomerName" placeholder="Customer Name" class="form-control" value="{{ old('CustomerName', $data->CustomerName) }}">
 
     <label for="reference">Reference:</label>
     <input type="text" name="Reference" placeholder="Reference" class="form-control" value="{{ old('Reference' ,$data->Reference) }}">
+=======
+    <input type="text" name="CustomerName" placeholder="Customer Name" class="form-control" value="{{ old('CustomerName' , $data->CustomerName) }}">
+
+    <label for="reference">Reference:</label>
+    <input type="text" name="Reference" placeholder="Reference" class="form-control" value="{{ old('Reference', $data->Reference) }}">
+>>>>>>> 1a7e4c55eb372997a3019b1c968b27e2cd3c7d7b
 
     <label for="status">Status:</label>
     <input type="text" name="Status" placeholder="Status" class="form-control" value="{{ old('Status', $data->Status) }}">

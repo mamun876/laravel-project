@@ -13,8 +13,8 @@ class SalesController extends Controller
      */
     public function index()
     {
-        $data['data']=Sales::all();
-        return view('backend.SalesList',$data);
+        $data=Sales::all();
+        return view('backend.SalesList', compact('data'));
     }
 
     /**
@@ -22,8 +22,8 @@ class SalesController extends Controller
      */
     public function create()
     {
-       
-       return view('backend.salescreate');
+
+        return view('backend.salescreate');
     }
 
     /**
@@ -32,11 +32,11 @@ class SalesController extends Controller
     public function store(Request $request, Sales $sales)
     {
         $validate = $request->validate([
-            'Date'=>'Required',
-            'CustomerName'=>'Required',
-            
+            'Date' => 'Required',
+            'CustomerName' => 'Required',
+
         ]);
-        if($validate){
+        if ($validate) {
             $sales->create($request->all());
             return redirect()->route('sales.list')->with('msg', 'Successfully inserted');
         }
@@ -55,9 +55,9 @@ class SalesController extends Controller
      */
     public function edit(string $id)
     {
-       $data['data']= Sales::find($id);
-       return view('backend.salesedit', $data);
-    // return view('backend/salesedit');
+        $data['data'] = Sales::find($id);
+        return view('backend.salesedit', $data);
+        // return view('backend/salesedit');
     }
 
     /**
@@ -65,16 +65,16 @@ class SalesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-       $data = Sales::find($id);
-       $validate = $request->validate([
-        'Date'=>'Required',
-        'CustomerName'=>'Required',
-        
-    ]);
-    if($validate){
-        $data->update($request->all());
-        return redirect()->route('sales.list')->with('msg', 'Updated inserted');
-    }
+        $data = Sales::find($id);
+        $validate = $request->validate([
+            'Date' => 'Required',
+            'CustomerName' => 'Required',
+
+        ]);
+        if ($validate) {
+            $data->update($request->all());
+            return redirect()->route('sales.list')->with('msg', 'Updated inserted');
+        }
     }
 
     /**
@@ -82,9 +82,8 @@ class SalesController extends Controller
      */
     public function delete(string $id)
     {
-        $sale=Sales::find($id);
+        $sale = Sales::find($id);
         $sale->delete();
         return redirect()->back()->with('msg', "successfully deleted");
-
     }
 }
