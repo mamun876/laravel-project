@@ -29,7 +29,7 @@ class PurchaseController extends Controller
      */
     public function store(Request $request, Purchase $purchase)
     {
-        $purchase = Purchase::all();
+       
         $validate = $request->validate([
             'SupplierName'=> 'required | min:2'
         ]);
@@ -52,8 +52,8 @@ class PurchaseController extends Controller
      */
     public function edit(string $id)
     {
-        $data['purchase']=Purchase::find($id);
-        return view('backedn.purchaseedit',$data );
+        $data=Purchase::find($id);
+        return view('backend.PurchaseEdit',compact('data') );
     }
 
     /**
@@ -61,7 +61,7 @@ class PurchaseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $purchase = Purchase::all();
+        $purchase = Purchase::find($id);
         $validate = $request->validate([
             'SupplierName'=> 'required | min:2'
         ]);

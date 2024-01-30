@@ -19,8 +19,8 @@ class ProductSeeder extends Seeder
         DB::table('product')->insert([
             'product_name' => 'Monitor',
             'sku' => 'SKU123',
-            'category' => 'Electronics',
-            'brand' => 'Sony',
+            'category_id' => '1',
+            'brand_id' => '2',
             'price' => 19.99,
             'unit' => 5.0,
             'qty' => '10',
@@ -34,8 +34,8 @@ class ProductSeeder extends Seeder
         DB::table('product')->insert([
             'product_name' => 'Couch',
             'sku' => 'SKU789',
-            'category' => 'Home',
-            'brand' => 'IKEA',
+            'category_id' => '2',
+            'brand_id' => '1',
             'price' => 499.99,
             'unit' => 1.0,
             'qty' => '5',

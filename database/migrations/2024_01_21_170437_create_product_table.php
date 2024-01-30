@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('product_name');
             $table->string('sku');
-            $table->string('category')->nullable();
-            $table->string('brand');
+            $table->tinyInteger('category_id')->nullable();
+            $table->tinyInteger('brand_id');
             $table->double('price');
             $table->double('unit');
             $table->string('qty');

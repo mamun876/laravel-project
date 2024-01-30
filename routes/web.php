@@ -70,17 +70,17 @@ Route::get('brand/delete{id}', [BrandController::class, 'delete'])->name('brand.
 Route::get('sales', [SalesController::class, 'index'])->name('sales.list');
 Route::get('sales/create', [SalesController::class, 'create'])->name('sales.create');
 Route::post('sales/store', [SalesController::class, 'store'])->name('sales.store');
-Route::get('sales/delete/{$id}', [SalesController::class, 'delete'])->name('sales.delete');
-Route::get('sales/edit/{$id}', [SalesController::class, 'edit'])->name('sales.edit');
-Route::post('sales/update/{$id}', [SalesController::class, 'update'])->name('sales.update');
+Route::get('sales/delete/{id}', [SalesController::class, 'delete'])->name('sales.delete');
+Route::get('sales/edit/{id}', [SalesController::class, 'edit'])->name('sales.edit');
+Route::post('sales/update/{id}', [SalesController::class, 'update'])->name('sales.update');
 
 // purchase Route
 Route::get('purchase', [PurchaseController::class, 'index'])->name('purchase.list');
 Route::get('purchase/create', [PurchaseController::class, 'create'])->name('purchase.create');
 Route::post('purchase/store', [PurchaseController::class, 'store'])->name('purchase.store');
-Route::get('purchase/edit/{$id}', [PurchaseController::class, 'edit'])->name('purchase.edit');
-Route::post('purchase/update/{$id}', [PurchaseController::class, 'update'])->name('purchase.update');
-Route::get('purchase/delete/{$id}', [PurchaseController::class, 'delete'])->name('purchase.delete');
+Route::get('purchase/edit/{id}', [PurchaseController::class, 'edit'])->name('purchase.edit');
+Route::post('purchase/update/{id}', [PurchaseController::class, 'update'])->name('purchase.update');
+Route::get('purchase/delete/{id}', [PurchaseController::class, 'delete'])->name('purchase.delete');
 
 // Expenses Route
 Route::get('expense',[ExpenseController::class, 'index'])->name('expense.list');
