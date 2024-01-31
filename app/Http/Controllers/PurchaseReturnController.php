@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PurchaseReturnModel;
 use Illuminate\Http\Request;
 
 class PurchaseReturnController extends Controller
@@ -11,7 +12,8 @@ class PurchaseReturnController extends Controller
      */
     public function index()
     {
-        //
+      $purchase_return= PurchaseReturnModel::all();
+      return view('backend/PurchaseReturnCreate', compact('purchase_return'));
     }
 
     /**

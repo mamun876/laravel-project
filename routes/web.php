@@ -109,11 +109,11 @@ Route::get('transfer/delete{id}',[TransferController::class, 'delete'])->name('t
 
 //Sales Return Route
 Route::get('return', [SalesReturnController::class, 'index'])->name('sales_return.list');
-Route::get('return/create', [SalesReturnController::class, 'create'])->name('sales_return.create');
-Route::get('return/store', [SalesReturnController::class, 'store'])->name('sales_return.store');
-Route::get('return/edit{id}', [SalesReturnController::class, 'edit'])->name('sales_return.edit');
-Route::get('return/update{id}', [SalesReturnController::class, 'update'])->name('sales_return.update');
-Route::get('return/delete{id}', [SalesReturnController::class, 'delete'])->name('sales_return.delete');
+Route::get('sales_return/create', [SalesReturnController::class, 'create'])->name('sales_return.create');
+Route::post('sales_return/store', [SalesReturnController::class, 'store'])->name('sales_return.store');
+Route::get('sales_return/edit{id}', [SalesReturnController::class, 'edit'])->name('sales_return.edit');
+Route::post('sales_return/update{id}', [SalesReturnController::class, 'update'])->name('sales_return.update');
+Route::get('sales_return/delete{id}', [SalesReturnController::class, 'delete'])->name('sales_return.delete');
 
 // purchasereturn Route
 Route::get('purchase_return', [PurchaseReturnController::class, 'index'])->name('purchase_return.list');

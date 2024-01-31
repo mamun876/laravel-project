@@ -62,7 +62,7 @@
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/return1.svg')}}" alt="img"><span> Return</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('sales_return.list')}}">Sales Return List</a></li>
-                        <li><a href="{{route('sales.create')}}">Add Sales Return </a></li>
+                        <li><a href="{{route('sales_return.create')}}">Add Sales Return </a></li>
                         <li><a href="{{route('purchase_return.list')}}">Purchase Return List</a></li>
                         <li><a href="{{route('purchase_return.create')}}">Add Purchase Return </a></li>
                     </ul>

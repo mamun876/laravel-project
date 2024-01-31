@@ -13,8 +13,8 @@ class SalesReturnController extends Controller
      */
     public function index()
     {
-        $data['returns'] = SalesReturnModel::all();
-        return view('backend.ReturnList', $data);
+        $sales_return = SalesReturnModel::all();
+        return view('backend.SalesReturnList', compact('sales_return'));
     }
 
     /**
@@ -64,6 +64,7 @@ class SalesReturnController extends Controller
     {
         $salesReturn = SalesReturnModel::find($id);
         $salesReturn->update($request->all());
+        return redirect()->route('sales_return.list')->with('msg', "updated successfully");
     }
 
     /**
