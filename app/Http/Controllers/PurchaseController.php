@@ -29,10 +29,6 @@ class PurchaseController extends Controller
      */
     public function store(Request $request, Purchase $purchase)
     {
-<<<<<<< HEAD
-=======
-       
->>>>>>> 1a7e4c55eb372997a3019b1c968b27e2cd3c7d7b
         $validate = $request->validate([
             'SupplierName'=> 'required'
         ]);
@@ -55,13 +51,8 @@ class PurchaseController extends Controller
      */
     public function edit(string $id)
     {
-<<<<<<< HEAD
         $data['purchase']=Purchase::find($id);
         return view('backend.PurchaseEdit',$data );
-=======
-        $data=Purchase::find($id);
-        return view('backend.PurchaseEdit',compact('data') );
->>>>>>> 1a7e4c55eb372997a3019b1c968b27e2cd3c7d7b
     }
 
     /**
@@ -70,7 +61,6 @@ class PurchaseController extends Controller
     public function update(Request $request, $id)
     {
         $purchase = Purchase::find($id);
-<<<<<<< HEAD
         // $validate = $request->validate([
         //     'SupplierName'=> 'required',
         // ]);
@@ -81,12 +71,6 @@ class PurchaseController extends Controller
 
         //     ];
         // dd($request->all());
-=======
-        $validate = $request->validate([
-            'SupplierName'=> 'required | min:2'
-        ]);
-        if($validate){
->>>>>>> 1a7e4c55eb372997a3019b1c968b27e2cd3c7d7b
             $purchase->update($request->all());
 
             return redirect()->route('purchase.list')->with('msg', 'update successfully');
