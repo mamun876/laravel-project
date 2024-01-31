@@ -21,15 +21,21 @@ class TransferController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/TransferCreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Transfer $transfer)
     {
-        //
+        $validate=$request->validate([
+            'from'=>'required',
+        ]);
+        if($validate){
+            $transfer->create($request->all());
+            return redirect()->route('transfer.list',)->with('msg', "successfully inserted");
+        }
     }
 
     /**
@@ -45,7 +51,8 @@ class TransferController extends Controller
      */
     public function edit(string $id)
     {
-        //
+       $transfer=Transfer::find($id);
+       return view('backend/TransferEdit', compact('transfer'));
     }
 
     /**
@@ -53,14 +60,19 @@ class TransferController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $transfer=Transfer::find($id);
+        $transfer->update($request->all());
+        return redirect()->route('transfer.list')->with('msg', "updated successfully");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+        $transfer=Transfer::find($id);
+        $transfer->delete();
+        return redirect()->back()->with('msg', "deleted successfully");
+
     }
 }

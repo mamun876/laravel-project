@@ -87,9 +87,9 @@ Route::get('purchase/delete/{id}', [PurchaseController::class, 'delete'])->name(
 Route::get('expense',[ExpenseController::class, 'index'])->name('expense.list');
 Route::get('expense/create',[ExpenseController::class, 'create'])->name('expense.create');
 Route::post('expense/store',[ExpenseController::class, 'store'])->name('expense.store');
-Route::get('expense/edit{id}',[ExpenseController::class, 'edit'])->name('expense.edit');
+Route::get('expense/edit/{id}',[ExpenseController::class, 'edit'])->name('expense.edit');
 Route::post('expense/update{id}',[ExpenseController::class, 'update'])->name('expense.update');
-Route::get('expense/delete',[ExpenseController::class, 'delete'])->name('expense.delete');
+Route::get('expense/delete{id}',[ExpenseController::class, 'delete'])->name('expense.delete');
 
 // quototation Route
 Route::get('quotation',[QuotationController::class, 'index'])->name('quotation.list');
@@ -97,7 +97,7 @@ Route::get('quotation/create',[QuotationController::class, 'create'])->name('quo
 Route::get('quotation/store',[QuotationController::class, 'store'])->name('quotation.store');
 Route::get('quotation/edit{id}',[QuotationController::class, 'edit'])->name('quotation.edit');
 Route::get('quotation/update{id}',[QuotationController::class, 'update'])->name('quotation.update');
-Route::get('quotation/delete',[QuotationController::class, 'delete'])->name('quotation.delete');
+Route::get('quotation/delete{id}',[QuotationController::class, 'delete'])->name('quotation.delete');
 
 // Transfer Route
 Route::get('transfer',[TransferController::class, 'index'])->name('transfer.list');
@@ -105,7 +105,7 @@ Route::get('transfer/create',[TransferController::class, 'create'])->name('trans
 Route::post('transfer/store',[TransferController::class, 'store'])->name('transfer.store');
 Route::get('transfer/edit{id}',[TransferController::class, 'edit'])->name('transfer.edit');
 Route::post('transfer/update{id}',[TransferController::class, 'update'])->name('transfer.update');
-Route::get('transfer/delete',[TransferController::class, 'delete'])->name('transfer.delete');
+Route::get('transfer/delete{id}',[TransferController::class, 'delete'])->name('transfer.delete');
 
 //Sales Return Route
 Route::get('return', [SalesReturnController::class, 'index'])->name('sales_return.list');
@@ -113,7 +113,7 @@ Route::get('return/create', [SalesReturnController::class, 'create'])->name('sal
 Route::get('return/store', [SalesReturnController::class, 'store'])->name('sales_return.store');
 Route::get('return/edit{id}', [SalesReturnController::class, 'edit'])->name('sales_return.edit');
 Route::get('return/update{id}', [SalesReturnController::class, 'update'])->name('sales_return.update');
-Route::get('return/delete', [SalesReturnController::class, 'delete'])->name('sales_return.delete');
+Route::get('return/delete{id}', [SalesReturnController::class, 'delete'])->name('sales_return.delete');
 
 // purchasereturn Route
 Route::get('purchase_return', [PurchaseReturnController::class, 'index'])->name('purchase_return.list');
@@ -121,7 +121,7 @@ Route::get('purchase_return/create', [PurchaseReturnController::class, 'create']
 Route::post('purchase_return/store', [PurchaseReturnController::class, 'store'])->name('purchase_return.store');
 Route::get('purchase_return/edit{id}', [PurchaseReturnController::class, 'edit'])->name('purchase_return.edit');
 Route::post('purchase_return/update{id}', [PurchaseReturnController::class, 'update'])->name('purchase_return.update');
-Route::post('purchase_return/delete', [PurchaseReturnController::class, 'delete'])->name('purchase_return.delete');
+Route::post('purchase_return/delete{id}', [PurchaseReturnController::class, 'delete'])->name('purchase_return.delete');
 
 // People Route
 Route::get('people', [PeopleController::class, 'index'])->name('people.list');

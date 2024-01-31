@@ -18,6 +18,7 @@ class TransferSeeder extends Seeder
         DB::table('transfer')->insert([
             'date' => '2024-01-22', // Assuming 'date' is a date column; replace with the actual date
             'from' => 'P132',
+            'paid' =>'200',
             'items' => 'Sadid',
             'status' => 'Active',
             

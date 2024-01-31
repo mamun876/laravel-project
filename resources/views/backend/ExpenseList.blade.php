@@ -34,7 +34,7 @@
       
        
         <td>{{$item->Description}}</td>
-        <td><a class="btn btn-success" href="expense/edit/{{$item->id}}">Edit</a> | 
+        <td><a class="btn btn-success" href="{{route('expense.edit', $item->id)}}">Edit</a> | 
             <a class="btn btn-danger" href="{{route('expense.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>

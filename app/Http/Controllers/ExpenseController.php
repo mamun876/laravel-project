@@ -21,7 +21,7 @@ class ExpenseController extends Controller
      */
     public function create()
     {
-        return view('backend/PurchaseCreate');
+        return view('backend/ExpenseCreate');
     }
 
     /**
@@ -70,8 +70,8 @@ class ExpenseController extends Controller
      */
     public function delete(string $id)
     {
-        $expense=Expense::find($id);
-        $expense->delete();
-        return redirect()->back()->with('msg', "Deleted Successfully");
+       $expense = Expense::find($id);
+       $expense->delete();
+       return redirect()->back()->with('msg', 'Deleted Successfully');
     }
 }

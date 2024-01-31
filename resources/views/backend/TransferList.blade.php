@@ -33,8 +33,8 @@
           </td>
       
 
-        <td><a class="btn btn-success" href="">Edit</a> | 
-            <a class="btn btn-danger" href="" onclick="return confirm('Are you sure to delete?')">Delete</a>
+        <td><a class="btn btn-success" href="{{route('transfer.edit', $item->id)}}">Edit</a> | 
+            <a class="btn btn-danger" href="{{route('transfer.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>
     @endforeach

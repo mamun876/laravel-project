@@ -7,12 +7,12 @@
     <h1 class="mb-4">Expense Form</h1>
 
     <form action="{{ route('expense.update', $expense->id) }}" method="post">
-        @csrf <!-- Add CSRF token for security -->
-        @method('PATCH') <!-- Use the PATCH method for updates -->
+        @csrf 
+        
 
         <div class="mb-3">
             <label for="categoryName" class="form-label">Category Name:</label>
-            <input type="text" class="form-control" value="{{ old('categoryName', $expense->categoryName) }}" id="categoryName" name="categoryName">
+            <input type="text" class="form-control" value="{{ old('CategoryName', $expense->CategoryName) }}" id="CategoryName" name="CategoryName">
         </div>
 
         <div class="mb-3">
