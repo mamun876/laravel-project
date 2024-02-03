@@ -70,8 +70,8 @@
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="{{asset('assets/img/icons/users1.svg')}}" alt="img"><span> People</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="{{route('people.list')}}">Customer List</a></li>
-                        <li><a href="addcustomer.html">Add Customer </a></li>
+                        <li><a href="{{route('customer.list')}}">Customer List</a></li>
+                        <li><a href="{{route('customer.create')}}">Add Customer </a></li>
                         <li><a href="supplierlist.html">Supplier List</a></li>
                         <li><a href="addsupplier.html">Add Supplier </a></li>
                         <li><a href="userlist.html">User List</a></li>

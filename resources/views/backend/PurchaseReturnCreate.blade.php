@@ -2,16 +2,18 @@
 @section('title', 'purchase')
 @section('content')
 
-<form action="{{ route('purchase.store') }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('purchase_return.store') }}" method="post" enctype="multipart/form-data">
     @csrf
-    <input type="text" name="SupplierName" placeholder="Supplier Name" value="{{ old('SupplierName') }}"> <br>
-    <input type="text" name="Reference" placeholder="Reference" value="{{ old('Reference') }}"> <br>
-    <input type="date" name="Date" placeholder="Date" value="{{ old('Date') }}"> <br>
-    <input type="text" name="Status" placeholder="Status"> <br>
-    <input type="number" name="GrandTotal" placeholder="Grand Total" value="{{ old('GrandTotal') }}"> <br>
-    <input type="number" name="Paid" placeholder="Paid" value="{{ old('Paid') }}"> <br>
-    <input type="number" name="Due" placeholder="Due" value="{{ old('Due') }}"> <br>
-    <input type="text" name="PaymentStatus" placeholder="Payment Status" value="{{ old('PaymentStatus') }}"> <br>
+    <input type="text" name="image" placeholder="Image name"  value="{{ old('image') }}"> <br>
+    <input type="date" name="date" placeholder="date" value="{{ old('date') }}"> <br>
+    <input type="text" name="supplier" placeholder="supplier"> <br>
+    <input type="number" name="reference" placeholder="reference" value="{{ old('reference') }}"> <br>
+    <input type="text" name="status" placeholder="status" value="{{ old('status') }}"> <br>
+    <input type="number" name="grand_total" placeholder="grand_total" value="{{ old('grand_total') }}"> <br>
+    <input type="number" name="paid" placeholder="paid" value="{{ old('paid') }}"> <br>
+    <input type="number" name="due" placeholder="due" value="{{ old('due') }}"> <br>
+    <input type="number" name="payment" placeholder="payment" value="{{ old('payment') }}"> <br>
+    
 
     <input type="submit" value="Submit">
 </form>

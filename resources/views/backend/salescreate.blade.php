@@ -1,7 +1,7 @@
 @extends('backend.layouts.app')
 @section('title', 'Home Page')
 @section('content')
-<form action="{{ route('sales.store') }}" method="post" style="width: 50%;" enctype="multipart/form-data">
+<form action="{{ route('sales.store') }}" method="post"  enctype="multipart/form-data">
     @csrf
     <label for="date">Date:</label>
     <input type="text" name="Date" placeholder="Date" class="form-control" value="{{ old('Date') }}">

@@ -19,7 +19,7 @@
          <th>Action</th>
     </tr>
     <!-- @php($i=1) -->
-    @foreach($people as $key=> $item)
+    @foreach($customer as $key=> $item)
 
     <tr>
         <td>{{++$key}}</td>
@@ -32,8 +32,8 @@
       
       
 
-        <td><a class="btn btn-success" href="">Edit</a> | 
-            <a class="btn btn-danger" href="" onclick="return confirm('Are you sure to delete?')">Delete</a>
+        <td><a class="btn btn-success" href="{{route('customer.edit', $item->id)}}">Edit</a> | 
+            <a class="btn btn-danger" href="{{route('customer.delete', $item->id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </td>
     </tr>
     @endforeach

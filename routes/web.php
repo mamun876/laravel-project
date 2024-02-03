@@ -121,10 +121,15 @@ Route::get('purchase_return/create', [PurchaseReturnController::class, 'create']
 Route::post('purchase_return/store', [PurchaseReturnController::class, 'store'])->name('purchase_return.store');
 Route::get('purchase_return/edit{id}', [PurchaseReturnController::class, 'edit'])->name('purchase_return.edit');
 Route::post('purchase_return/update{id}', [PurchaseReturnController::class, 'update'])->name('purchase_return.update');
-Route::post('purchase_return/delete{id}', [PurchaseReturnController::class, 'delete'])->name('purchase_return.delete');
+Route::get('purchase_return/delete{id}', [PurchaseReturnController::class, 'delete'])->name('purchase_return.delete');
 
-// People Route
-Route::get('people', [PeopleController::class, 'index'])->name('people.list');
+// Customer Route
+Route::get('customer', [PeopleController::class, 'index'])->name('customer.list');
+Route::get('customer/create', [PeopleController::class, 'create'])->name('customer.create');
+Route::post('customer/store', [PeopleController::class, 'store'])->name('customer.store');
+Route::get('customer/edit{id}', [PeopleController::class, 'edit'])->name('customer.edit');
+Route::post('customer/update{id}', [PeopleController::class, 'update'])->name('customer.update');
+Route::get('customer/delete{id}', [PeopleController::class, 'delete'])->name('customer.delete');
 
 // place Route
 Route::get('place', [PlaceController::class, 'index'])->name('place.list');
